@@ -1,0 +1,107 @@
+{% load crispy_forms_tags %}
+{% load static %}
+{% load webscrape_tags %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'blog/name.css' %}"> -->
+    <title>HOME</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <a class="navbar-brand" href="">INFOHOLIC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <h2 class="pt-4 text-light bg-dark text-center pb-4">TENNIS</h2>
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-8 pt-4 pl-4 pb-4">
+              <div class="card" style="width: 18rem;">
+                <img src="media/tennis/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Men's ATP Ranking</h5>
+                  <a href="{% url 'tennis-mens-rankings' %}" class="btn btn-primary">Click Here</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col pt-4 pl-4 pb-4">
+              <div class="card" style="width: 18rem;">
+                <img src="media/tennis/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Women's WTA Ranking </h5>
+                  <a href="{% url 'tennis-womens-rankings' %}" class="btn btn-primary">Click Here</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-100"></div>
+
+
+        <div class="row">
+
+          <div class="col-md-8 pt-4 pl-4 pb-4">
+            <div class="card" style="width: 18rem;">
+              <img src="media/tennis/1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Men's Doubles Ranking</h5>
+                <a href="{% url 'tennis-mens-doubles' %}" class="btn btn-primary">Click Here</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col pt-4 pl-4 pb-4">
+            <div class="card" style="width: 18rem;">
+              <img src="media/tennis/2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Women's Doubles Ranking</h5>
+                <a href="{% url 'tennis-womens-doubles' %}" class="btn btn-primary">Click Here</a>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+      </div>
+
+
+
+
+      <div class="jumbotron pt-4 pb-4 bg-secondary">
+        <h1 class="display-9 pb-2">To View Latest News </h1>
+        <a class="btn btn-primary btn-large" href="{% url 'tennis-news' %}" role="button">Click here</a>
+      </div>
+
+      <div class="jumbotron ">
+        <h1 class="display-6">To check other sports</h1>
+        <a class="btn btn-danger btn-sm" href="{% url 'sports' %}" role="button">Click here</a>
+      </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
